@@ -8,7 +8,7 @@ function myFunc() {
     buttonPressed = true
     
     var name = document.getElementById("taskBar");
-    var text = document.querySelectorAll("a");
+    var text = name.querySelectorAll("a");
 
     content[0].style.paddingLeft = "0%"
     content[0].style.textAlign = "center"
@@ -23,7 +23,7 @@ function myFunc() {
   else {
     buttonPressed = false
     var name = document.getElementById("taskBar");
-    var text = document.querySelectorAll("a");
+    var text = name.querySelectorAll("a");
 
     content[0].style.paddingLeft = "0%"
     content[0].style.textAlign = "center"
