@@ -69,9 +69,6 @@
 
     .collumn p {
         font-size: 30px;
-        @media (max-width: 750px) {
-            font-size: 120px;
-        }
         margin: auto;
         height: 60%;
         width: 96%;
@@ -81,6 +78,21 @@
         backdrop-filter: blur( 5px );
         -webkit-backdrop-filter: blur( 5px );
         border-radius: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .collumn {
+            font-size: 50px;
+            margin: auto;
+            height: 60%;
+            width: 96%;
+            color: black;
+            background: rgba( 255, 176, 247, 0.35 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 5px );
+            -webkit-backdrop-filter: blur( 5px );
+            border-radius: 10px; 
+        }
     }
   </style>
 </head>
