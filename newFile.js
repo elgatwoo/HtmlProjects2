@@ -17,7 +17,9 @@ function myFunc() {
     name.style.width = "3%";
     name.style.backgroundColor = "rgba(0, 0, 0, 0.65)"
     for (var i in text) {
+      text[i].style.transition = "color 0.35s"
       text[i].style.color = "rgba(255, 255, 255, 0)";
+      
     }
   } 
   else {
@@ -31,6 +33,7 @@ function myFunc() {
 
     name.style.width = "10%";
     for (var i in text) {
+      text[i].style.transition = "color 1s 0.25s"
       text[i].style.color = "rgba(255, 255, 255, 1)";
     }
   }

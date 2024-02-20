@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 
 <html>
 
@@ -27,7 +27,7 @@
       position: fixed;
       opacity: 0.65;
       background-image: linear-gradient(to bottom, black, rgb(77, 77, 77));
-      transition: all 1s;
+      transition: width 1s;
       background: rgba( 0, 0, 0, 0.35 );
       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
       backdrop-filter: blur( 2px );
@@ -47,8 +47,8 @@
       top: auto;
       text-decoration: none;
       font-size: 24px;
-      overflow: none;
-      transition: ease 0.5s;
+      
+      transition: color 0.1s
       
 
 
@@ -63,23 +63,14 @@
     .content {
         margin-left: 10%;
         transition: all 1s;
+        top: auto;
+        text-align: center;
+        
       
     }
 
-    .collumn {
-      float: left;
-      width: 50%;
-      text-align: center;
-      
-      
-      
-    }
-
-    .collumn p {
+    .content #background {
         font-size: 28px;
-        margin: auto;
-        height: 60%;
-        width: 96%;
         color: black;
         background: rgba( 255, 176, 247, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -88,35 +79,34 @@
         border-radius: 10px;
     }
 
-    @media (max-width: 600px) {
-    p {
-        font-size: small;
+    .content p {
+      
+      text-align: center;
+      overflow: hidden;
+      
     }
 
-    h1 {
-        font-size: small
-    }
-
-    h2 {
-        font-size:small;
-    }
-
-    a {
-        font-size: small;
+    .collumn {
+      width: 45%;
+      height: 60%;
+      font-size: 24px;
+      display:inline-block;
     }
 
     .collumn p {
-        font-size: small;
-    }
-
-    .taskBar a {
-      font-size: small;
+      background: rgba( 255, 176, 247, 0.35 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.33 );
+      backdrop-filter: blur( 5px );
+      -webkit-backdrop-filter: blur( 5px );
+      border-radius: 10px;
+      font-size: 16px;
+      height: 600px;
       
-
-
-
     }
-}
+
+    
+
+
 
   </style>
 </head>
@@ -132,29 +122,48 @@
 
   <div class="content">
     <div>
-        <h1 style="text-align: center; border-bottom: rgba(219, 155, 209, 0.7) 8px solid; height: 5%;">
+        <h1 style="text-align: center; height: 5%;">
             Welcome to my website
         </h1>
     </div>
 
-    <div class="collumn">
-      <h2 id="demo" style="color: black;">Next Project</h2>
-      <p>
-        I will update this with my projects in the near future! I will be working on a simple tic tac toe game for my first javascript project
-      </p>
+    <h1 style="text-align: center; font-size: 40px; padding: 4px;" id="background">
+      Main page
+    </h1>
+    
+    <div >
+      <div class="collumn"  style="margin-right: 1.5%;">
+        <h1 style="height: 60%;">
+          Next Project
+          <p style="padding: 8px;">
+            I will murder someone if this does not work
+          </p>
+        </h1>
+      </div>
+
+      <div class="collumn"  style="margin-left: 1.5%">
+        <h1>
+          Recent released
+
+          <p style="padding: 8px;">
+            I will murder someone if this does not work
+          </p>
+        </h1>
+      </div>
     </div>
 
-    <div class="collumn">
-      <h2>Newest Completed project:</h2>
-      <p>
-        Placeholder text hehe
-      </p>
+    <div>
+      <h1 id="background" style="width: 93%; margin-left: 3%; font-size: 40px; padding: 4px;">
+        About Me
+      </h1> 
     </div>
-
-
-
-    <script src="newFile.js"></script>
+    
+    
+    
+    
+    
   </div>
-</body>
+
+
 
 </html>
