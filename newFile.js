@@ -19,6 +19,11 @@ for(let i = 0; i < text.length; i++) {
   text[i].addEventListener('mouseleave', function() {
     text[i].style.backgroundColor = "rgba( 0, 0, 0, 0.35 )"
   })
+  text[i].addEventListener('transitionend', function(){
+    if(buttonPressed) {
+      text[i].style.visibility = "hidden"
+    }
+  })
 }
 
 function myFunc() {
@@ -47,6 +52,7 @@ function myFunc() {
 
     task.style.width = "10%";
     for (let i = 0; i < text.length; i++) {
+      text[i].style.visibility = "visible"
       text[i].style.transition = "color 1s 0.25s"
       text[i].style.color = "rgba(255, 255, 255, 1)";
       
