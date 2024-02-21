@@ -3,38 +3,53 @@ var buttonPressed = false
 const content = document.getElementsByClassName("content")
 const headings = document.getElementById("heading1")
 
+const task = document.getElementById("taskBar");
+const text = task.querySelectorAll("a");
+
+const converted = {
+
+}
+
+for(let i = 0; i < text.length; i++) {
+  text[i].addEventListener('mouseover', function() {
+    if(buttonPressed == false) {
+      text[i].style.backgroundColor = "rgba( 10, 10, 10, 1 )"
+    }
+  })
+  text[i].addEventListener('mouseleave', function() {
+    text[i].style.backgroundColor = "rgba( 0, 0, 0, 0.35 )"
+  })
+}
+
 function myFunc() {
   if(buttonPressed == false) {
     buttonPressed = true
-    
-    var name = document.getElementById("taskBar");
-    var text = name.querySelectorAll("a");
 
     content[0].style.paddingLeft = "0%"
     content[0].style.textAlign = "center"
     content[0].style.marginLeft = "3%"
     
-    name.style.width = "3%";
-    name.style.backgroundColor = "rgba(0, 0, 0, 0.65)"
-    for (var i in text) {
+    task.style.width = "3%";
+    task.style.backgroundColor = "rgba(0, 0, 0, 0.65)"
+    for (let i = 0; i < text.length; i++) {
       text[i].style.transition = "color 0.35s"
       text[i].style.color = "rgba(255, 255, 255, 0)";
+      
       
     }
   } 
   else {
     buttonPressed = false
-    var name = document.getElementById("taskBar");
-    var text = name.querySelectorAll("a");
 
     content[0].style.paddingLeft = "0%"
     content[0].style.textAlign = "center"
     content[0].style.marginLeft = "10%"
 
-    name.style.width = "10%";
-    for (var i in text) {
+    task.style.width = "10%";
+    for (let i = 0; i < text.length; i++) {
       text[i].style.transition = "color 1s 0.25s"
       text[i].style.color = "rgba(255, 255, 255, 1)";
+      
     }
   }
   
