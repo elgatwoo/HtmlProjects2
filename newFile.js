@@ -37,7 +37,7 @@ function myFunc() {
     task.style.width = "3%";
     task.style.backgroundColor = "rgba(0, 0, 0, 0.65)"
     for (let i = 0; i < text.length; i++) {
-      text[i].style.transition = "color 0.35s"
+      text[i].style.transition = "color 0.15s"
       text[i].style.color = "rgba(255, 255, 255, 0)";
       
       
@@ -53,7 +53,7 @@ function myFunc() {
     task.style.width = "10%";
     for (let i = 0; i < text.length; i++) {
       text[i].style.visibility = "visible"
-      text[i].style.transition = "color 1s 0.25s"
+      text[i].style.transition = "color 1.25s 0.15s"
       text[i].style.color = "rgba(255, 255, 255, 1)";
       
     }
