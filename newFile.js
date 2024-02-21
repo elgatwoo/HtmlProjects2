@@ -12,7 +12,7 @@ const img = task.querySelector("img")
 const converted = {
 
 }
-
+/* code */
 for(let i = 0; i < text.length; i++) {
   text[i].addEventListener('mouseover', function() {
     if(hover) {
