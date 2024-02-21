@@ -11,11 +11,11 @@
     * {
       font-family: Karla;
     }
-
     
     body {
       background: url(background.png) no-repeat center fixed;
       background-size: cover;
+      overflow: hidden;
     }
     .taskBar {
       left: 0;
@@ -28,23 +28,24 @@
       opacity: 0.65;
       background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.35));
       transition: width 1s;
-
+      border-radius: 6px;
     }
 
     .taskBar a {
       position: static;
       float: top;
       display: block;
-      color: white;
+      color: rgba(255, 255, 255, 0);
       text-align: center;
       padding-top: 16px;
       top: auto;
       text-decoration: none;
       font-size: 24px;
-      visibility: hidden;
+      border-radius: 6px;
       
       
-      transition: color 0.1s
+      
+      transition: color 0.35s
       
 
 

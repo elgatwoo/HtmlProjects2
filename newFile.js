@@ -1,10 +1,13 @@
 var buttonPressed = false
+var expanded = false
+var hover = false
 
 const content = document.getElementsByClassName("content")
 const headings = document.getElementById("heading1")
 
 const task = document.getElementById("taskBar");
 const text = task.querySelectorAll("a");
+const img = task.querySelector("img")
 
 const converted = {
 
@@ -12,7 +15,7 @@ const converted = {
 
 for(let i = 0; i < text.length; i++) {
   text[i].addEventListener('mouseover', function() {
-    if(buttonPressed == false) {
+    if(hover) {
       text[i].style.backgroundColor = "rgba( 10, 10, 10, 1 )"
     }
   })
@@ -20,43 +23,32 @@ for(let i = 0; i < text.length; i++) {
     text[i].style.backgroundColor = "rgba( 0, 0, 0, 0.35 )"
   })
   text[i].addEventListener('transitionend', function(){
-    if(buttonPressed) {
-      text[i].style.visibility = "hidden"
+    if(!expanded) {
+      task.style.width = "3%"
+      content[0].style.marginLeft = "3%"
+    }
+  })
+
+  task.addEventListener('transitionend', function(){
+    if(expanded) {
+      text[i].style.color = "rgba(255, 255, 255, 1)"
+      hover = true
     }
   })
 }
 
-function myFunc() {
-  if(buttonPressed == false) {
-    buttonPressed = true
-
-    content[0].style.paddingLeft = "0%"
-    content[0].style.textAlign = "center"
-    content[0].style.marginLeft = "3%"
-    
-    task.style.width = "3%";
-    task.style.backgroundColor = "rgba(0, 0, 0, 0.65)"
-    for (let i = 0; i < text.length; i++) {
-      text[i].style.transition = "color 0.35s"
-      text[i].style.color = "rgba(255, 255, 255, 0)";
-      
-      
-    }
+img.addEventListener('mousedown', function() {
+  if(!expanded) {
+    task.style.width = "10%"
+    content[0].style.marginLeft = "10%"
+    expanded = true
   } 
   else {
-    buttonPressed = false
-
-    content[0].style.paddingLeft = "0%"
-    content[0].style.textAlign = "center"
-    content[0].style.marginLeft = "10%"
-
-    task.style.width = "10%";
-    for (let i = 0; i < text.length; i++) {
-      text[i].style.visibility = "visible"
-      text[i].style.transition = "color 1s 0.25s"
-      text[i].style.color = "rgba(255, 255, 255, 1)";
-      
+    for(let i = 0; i < text.length; i++) {
+      text[i].style.color = "rgba(255, 255, 255, 0)"
     }
+
+    expanded = false
+    hover = false
   }
-  
-}
+})
