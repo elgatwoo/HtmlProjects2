@@ -1,4 +1,4 @@
-var buttonPressed = false
+var buttonPressed = true
 
 const content = document.getElementsByClassName("content")
 const headings = document.getElementById("heading1")
