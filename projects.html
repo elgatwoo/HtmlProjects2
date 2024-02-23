@@ -8,17 +8,19 @@
 
   <style>
     @import url(https://fonts.googleapis.com/css?family=Karla:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+
     * {
       font-family: Karla;
     }
-    
+
     body {
       background: url(background.png) no-repeat center fixed;
       background-size: cover;
     }
+
     .taskBar {
       left: 0;
-      width: 3%;
+      width: 5%;
       height: 100%;
       background-color: black;
       z-index: 1;
@@ -36,86 +38,115 @@
       display: block;
       color: rgba(255, 255, 255, 0);
       text-align: center;
-      padding-top: 16px;
+      padding-top: 6px;
       top: auto;
       text-decoration: none;
-      font-size: 24px;
+      font-size: 1.25rem;
       border-radius: 6px;
-      
-      
-      
-      transition: color 0.35s
-      
 
 
 
+      transition: color 0.2s
     }
 
 
     .content {
-        margin-left: 3%;
-        transition: all 0.35s;
-        top: auto;
-        text-align: center;
-        
-      
+      margin-left: 5%;
+      transition: all 0.35s;
+      top: auto;
+      text-align: center;
+
+
     }
 
     .content #background {
-        font-size: 28px;
-        color: black;
-        background: rgba( 255, 176, 247, 0.35 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 5px );
-        -webkit-backdrop-filter: blur( 5px );
-        border-radius: 10px;
+      font-size: 28px;
+      color: black;
+      background: rgba(255, 176, 247, 0.35);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 10px;
     }
 
     .content p {
-      
+
       text-align: center;
       overflow: hidden;
-      
+
     }
 
     .collumn {
       width: 45%;
       height: 60%;
       font-size: 24px;
-      display:inline-block;
+      display: inline-block;
     }
 
     .collumn p {
-      background: rgba( 255, 176, 247, 0.35 );
-      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.33 );
-      backdrop-filter: blur( 5px );
-      -webkit-backdrop-filter: blur( 5px );
+      background: rgba(255, 176, 247, 0.35);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.33);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
       border-radius: 10px;
-      font-size: 16px;
-      height: 600px;
-      
+      font-size: 1rem;
+      height: 250px;
+
     }
 
-    
+    .taskBar img {
+      width: 4vw;
+      height: 4vh;
+      display: flex;
+      justify-content:
+      center;
+      margin: auto
+    }
 
+    @media screen and (max-width: 800px) {
+      .collumn p {
+        font-size: 1rem;
+      }
+    }
 
+    @media screen and (max-width: 800px) {
+      .taskBar a {
+        font-size: 0.75rem;
+        visibility: hidden;
+      }
+    }
 
+    @media screen and (max-width: 800px) {
+      .content h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .taskBar img {
+        width: 4vw;
+        height: 4vh;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="taskBar" id="taskBar">
-    <img src="arrow.png" alt="" style="position: absolute; width: 30px; height: 30px; right: -4;" onclick="myFunc()">
+    <img src="menu-list-navigation-svgrepo-com (1).svg" alt="" style="">
     <a href="index.html">Home page</a>
     <a href="aboutMe.html">About me</a>
     <a href="projects.html">Projects</a>
-    
+
   </div>
 
   <div class="content">
-    <h1 id="background">hello</h1>
+    <h1 id="background" style="height: 10%;">
+      My projects
+    </h1>
   </div>
-  
+
   <script src="newFile.js"></script>
 </body>
+
 </html>
